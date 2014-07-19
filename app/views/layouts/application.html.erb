@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JqueryAutocomplete</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+	<%= javascript_include_tag 'autocomplete-rails.js' %>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= link_to "address", addresses_path %>
+	<%= link_to "category", categories_path %>	
+	
+	<div style="margin: 50px; 1px;">	
+	<%= yield %>
+	</div>
+	<%= yield :scripts %>
+</body>
+</html>

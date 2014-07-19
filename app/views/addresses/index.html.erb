@@ -1,0 +1,25 @@
+
+	<div>
+		<%= gmaps4rails(@json) %>
+	</div>
+
+	<%= link_to "New address", new_address_path %>
+
+	<table border="1px">
+
+	<% @addresses.each do |address| %>
+		<tr>
+			<td>Address</td>
+			<td>City</td>
+			<td>Country</td>
+			<td>Zip_code</td>
+		</tr>
+		<tr>
+			<td><%= address.address %></td>
+			<td><%= address.city %></td>
+			<td><%= address.country %></td>
+			<td><%= address.zip_code %></td>
+		</tr>
+	<% end %>
+
+	</table>

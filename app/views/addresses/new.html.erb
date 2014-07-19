@@ -1,0 +1,22 @@
+<%= form_for @address do |f| %>
+	<p>address</p>
+	<p>
+		<%= f.text_field :address %>	
+	</p>
+	<p>city</p>
+	<p>
+		<%= f.text_field :city %>	
+	</p>
+	<p>country</p>
+	<p>
+		<%= f.text_field :country %>
+	</p>
+	<p>zipcode</p>
+	<p>
+		<%= f.text_field :zip_code %>
+	</p>
+
+	<p>
+		<%= f.submit %>	
+	</p>
+<% end %>

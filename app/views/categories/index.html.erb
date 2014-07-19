@@ -1,0 +1,15 @@
+<div id="search">
+		<%= form_tag categories_path, :method => 'get' do |f| %>
+		<%= autocomplete_field_tag 'search','', autocomplete_category_name_categories_path, :placeholder => 'course name'%>
+		<%= submit_tag "search" %>
+	<% end %>
+</div>
+
+<h1>category listing</h1>
+<% if @categories.present? %>
+<% @categories.each do |category| %>
+	<p><%= category.name %></p>
+<% end %>
+<% end %>
+
+<%= link_to "add new category", new_category_path %>
